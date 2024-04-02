@@ -39,7 +39,7 @@ public class DefineCommand implements SlashCommand{
             .map(ApplicationCommandInteractionOptionValue::asString)
             .orElse("NULL");
 
-        System.out.println(wordToDefine);    
+        //System.out.println(wordToDefine);    
         String definition = APIHandler.callMerriamWebsterApi(wordToDefine);
 
         return event.reply()

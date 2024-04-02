@@ -43,7 +43,7 @@ public class GlobalCommandRegistrar implements ApplicationRunner {
         for (Resource resource : matcher.getResources("commands/*.json")) {
             ApplicationCommandRequest request = d4jMapper.getObjectMapper()
                 .readValue(resource.getInputStream(), ApplicationCommandRequest.class);
-
+                System.out.println(request);
             commands.add(request);
         }
 
